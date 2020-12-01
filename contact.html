@@ -6,7 +6,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        form .error {
+            color: #ff0001;
+        }
+    </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark smart-scroll">
         <a class="navbar-brand" href="index.html"><img src="img/j31.png" width="50px" height="50px"></a>
@@ -25,7 +31,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">SERVICES</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Rooms</a></li>
+                        <li><a class="dropdown-item" href="Rooms.html">Rooms</a></li>
                         <li><a class="dropdown-item" href="#">SPA</a></li>
                         <li><a class="dropdown-item" href="#">Resort</a></li>
                         <li><a class="dropdown-item" href="#">Food & Drinks</a></li>
@@ -39,64 +45,97 @@
                     </ul>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="Booking.html">Online Booking</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="contact.html">CONTACT</a>
                 </li>
             </ul>
         </div>
     </nav>
-    
-        <div class="container pt-5 mt-5">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="row">
-                        <div class="col-sm-12 col-sm-offset-2">
-                            <div>
-                                <h2 class="text-center">CONTACT US</h2>
-                            </div>
-                            <form method="post" data-form-title="CONTACT US" class="pt-2">
-                                <label for="email">Email address:</label>
-                                <input type="hidden" data-form-email="true">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" name="name" required="" placeholder="Name*"
-                                        data-form-field="Name">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" name="email" required=""
-                                        placeholder="Email*" data-form-field="Email">
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-control" name="phone" placeholder="Phone"
-                                        data-form-field="Phone">
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-control" name="message" placeholder="Message" rows="7"
-                                        data-form-field="Message"></textarea>
-                                </div>
-                                <div>
-                                    <div class="text-center">
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </div>
-                                </div>
-                            </form>
+
+    <div class="container pt-5 mt-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12 col-sm-offset-2">
+                        <div>
+                            <h2 class="text-center">CONTACT US</h2>
                         </div>
+                        <form method="post" data-form-title="CONTACT US" class="pt-2" id="MyForm">
+                            <label for="email">Email address:</label>
+                            <input type="hidden" data-form-email="true">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Name*"
+                                    data-form-field="Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email*"
+                                    data-form-field="Email">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" name="phone" placeholder="Phone" id="phone"
+                                    data-form-field="Phone">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" placeholder="Message" rows="7"
+                                    id="message" data-form-field="Message"></textarea>
+                            </div>
+                            <div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <div class="embed-responsive embed-responsive-100x400px mb-2">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35818.719732048536!2d-4.25169!3d55.868392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1sen!2sus!4v1448625188752"
-                    allowfullscreen></iframe>
-            </div>
-        </div>  
+        </div>
+        <div class="embed-responsive embed-responsive-100x400px mb-2">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35818.719732048536!2d-4.25169!3d55.868392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1sen!2sus!4v1448625188752"
+                allowfullscreen></iframe>
+        </div>
+    </div>
     <footer class="py-4 bg-dark text-white-50">
         <div class="container text-center">
-            <small>Copyright &copy; Hotal Royal</small>
+            <small>Copyright &copy; Hotel Royal</small>
         </div>
     </footer>
 
     <script src="scripts/jquery-3.5.1.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#MyForm").validate({
+                rules: {
+                    'name': {
+                        required: true,
+                        minlength: 2
+                    },
+                    'email': {
+                        required: true,
+                        email: true,
+                    },
+                    'phone': {
+                        required: true,
+                    },
+                    'message': {
+                        required: true,
+                        minlength: 10
+                    },
 
+                },
+                messages: {
+                    'name': "The min length is 2.",
+                    'email': "Please enter Email in proper format.",
+                    'Phone': "Please enter a Password",
+                    'message': "The min length is 10.",
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -286,5 +286,66 @@ display: inline-block;
     height: 320px;
     width: 100%;
   }
-  
+  .roomimg{
+    width: 100%;
+    height: 100%;
+  }
+
+  .extraspacing{
+    padding-left: unset !important;
+    margin-top: unset !important;
+  }
+
+  .productrating{
+    list-style-type: none;
+    color:#ccc;
+    margin-left: 1%;
+  }
+
+  .dialog{
+    position: fixed;
+    top: auto;
+    left: auto;
+    right: 0.5rem;
+    bottom: 0;
+    margin-bottom: 0.5rem;
+    min-width: 300px;
+    max-width: 400px;
+  }
+  .icon 
+  {
+    font-size: 3rem;
+  }
+ */
+
+.subcontact {
+  font-size:34px;
+}
+
+.starrating > input {display: none;}  /* Remove radio buttons */
+
+.starrating > label:before { 
+  content: "\f005"; /* Star */
+  margin: 2px;
+  font-size: 2em;
+  font-family: FontAwesome;
+  display: inline-block; 
+}
+
+.starrating > label
+{
+  color: #222222; /* Start color when not clicked */
+}
+
+.starrating > input:checked ~ label
+{ color: #ffca08 ; } /* Set yellow color when star checked */
+
+.starrating > input:hover ~ label
+{ color: #ffca08 ;  }
  
+.bookimg {
+  background-image: url('img/j97.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
