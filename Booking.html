@@ -1,0 +1,282 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .bookimg {
+            background-image: url('img/j97.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        form .error {
+            color: #ff0001;
+        }
+    </style>
+</head>
+
+<body class="bookimg">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark smart-scroll">
+        <a class="navbar-brand" href="index.html"><img src="img/j31.png" width="50px" height="50px"></a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarCollapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Aboutus.html">ABOUT US</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown">SERVICES</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="Rooms.html">Rooms</a></li>
+                        <li><a class="dropdown-item" href="Spa.html">SPA</a></li>
+                        <li><a class="dropdown-item" href="Resort.html">Resort</a></li>
+                        <li><a class="dropdown-item" href="Entertainment.html">Entertainment</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Booking.html">Online Booking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container pt-5 mt-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <div>
+                    <h2 class="text-center pt-4">Online Booking</h2>
+                </div>
+                <form method="get" class="pt-2 form" id="MyForm" name="MyForm">
+                    <h5 class="text-center pt-4">Personal Details</h5>
+                    <input type="hidden" data-form-email="true">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="Name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" data-form-field="Name" placeholder="Name*">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="Email">Email ID</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email*"
+                                    data-form-field="Email">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="Phone">Phone NO.</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone"
+                                    data-form-field="Phone">
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="text-center">Booking Details</h5>
+                    <div class="form-group">
+                        <label for="destination">DESTINATION</label>
+                        <input class="form-control" type="text" id="dest" name="dest"
+                            placeholder="Country, ZIP, city..." data-form-field="dest">
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="checkin">CHECK IN</label>
+                                <input class="form-control" name="checkin" id="checkin" placeholder="CHECK IN*"
+                                    type="date" data-form-field="checkin">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="checkout">CHECK OUT</label>
+                                <input class="form-control" name="checkout" id="checkout" placeholder="CHECK OUT*"
+                                    type="date" data-form-field="checkout">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="rooms">ROOMS</label>
+                                <select class="form-control" name="rooms">
+                                    <option value="" selected hidden>no of rooms</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="rooms">ADULTS</label>
+                                <select class="form-control" name="adults">
+                                    <option value="" selected hidden>no of adults</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label for="rooms">CHILDREN</label>
+                                <select class="form-control" name="child">
+                                    <option value="" selected hidden>no of children</option>
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <b>Please describe your needs e.g. Extra beds, children's cots</b>
+                        <textarea class="form-control" id="comments" rows="5" name="comments"
+                            data-form-field="comments"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1">Passport Upload</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="file">
+                    </div>
+                    <p class="emsgb"></p>
+                    <div>
+                        <div class="text-center">
+                            <button type="submit" id="submitbtn" class="btn btn-success">BOOK
+                                NOW</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    <footer class="py-4 bg-dark text-white-50">
+        <div class="container text-center">
+            <small>Copyright &copy; Hotel Royal</small>
+        </div>
+    </footer>
+
+    <script src="scripts/jquery-3.5.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script>
+        var createAllErrors = function () {
+            var form = $(this),
+                errorList = $("ul.errorMessages", form);
+
+            var showAllErrorMessages = function () {
+                errorList.empty();
+
+                // Find all invalid fields within the form.
+                var invalidFields = form.find(":invalid").each(function (index, node) {
+
+                    // Find the field's corresponding label
+                    var label = $("label[for=" + node.id + "] "),
+                        // Opera incorrectly does not fill the validationMessage property.
+                        message = node.validationMessage || 'Invalid value.';
+
+                    errorList
+                        .show()
+                        .append("<li><span>" + label.html() + "</span> " + message + "</li>");
+                });
+            };
+
+            // Support Safari
+            form.on("submit", function (event) {
+                if (this.checkValidity && !this.checkValidity()) {
+                    $(this).find(":invalid").first().focus();
+                    event.preventDefault();
+                }
+            });
+
+            $("input[type=submit], button:not([type=button])", form)
+                .on("click", showAllErrorMessages);
+
+            $("input", form).on("keypress", function (event) {
+                var type = $(this).attr("type");
+                if (/date|email|month|number|search|tel|text|time|url|week/.test(type)
+                    && event.keyCode == 13) {
+                    showAllErrorMessages();
+                }
+            });
+        };
+
+        $("form").each(createAllErrors);
+
+        $(document).ready(function () {
+                $("#MyForm").validate({
+                    rules: {
+                        'name': {
+                            required: true,
+                            minlength: 2
+                        },
+                        'email': {
+                            required: true,
+                            email: true,
+                        },
+                        'phone': {
+                            required: true,
+                            maxlength:10,
+                        },
+                        'dest': {
+                            required: true,
+                            minlength: 5
+                        },
+                        'checkin': {
+                            required: true,
+                            minlength: 5
+                        },
+                        'checkout': {
+                            required: true,
+                            minlength: 5
+                        },
+                        'comments': {
+                            required: true,
+                            minlength: 10
+                        },
+                        'file': {
+                            required: true,
+                            minlength: 10
+                        },
+
+                    },
+                    messages: {
+                        'name': "The Name Should be minimum 2 character.",
+                        'email': "Please Enter Email in proper format.",
+                        'Phone': "Please enter a phoneno",
+                        'dest': "The Destination should be minimum Length is 5 character",
+                        'checkin': "Please Select CheckIn date",
+                        'checkout': "Please Select CheckOut date",
+                        'comments': "Enter the comments minimum length is 10 character.",
+                        'file': "Please Select File",
+                    }
+                });
+            
+
+        });
+    </script>
+</body>
+
+</html>
