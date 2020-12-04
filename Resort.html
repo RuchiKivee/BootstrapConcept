@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark smart-scroll">
         <a class="navbar-brand" href="index.html"><img src="img/j31.png" width="50px" height="50px"></a>
@@ -41,55 +42,48 @@
         </div>
     </nav>
 
-    <div class="carousel-inner">
-        <img src="img/j59.jpg" alt="Los Angeles" />
-    </div>
-    <h1 class="text-center pt-5">
-        About US
-    </h1>
-    <div class="container mt-2">
-        <div class="row show-on-scroll">
-            <div class="col-lg-8">
-                <span><img class="image border-4" src="img/j58.jpg" alt="Responsive image" /></span>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-4">
-                <p><b>Royal Hotel & Resort</b> The best and most effective websites are the ones that entice the
-                    visitor to spend time exploring. Professional photography and video are both great mediums for
-                    storytelling, especially for hotels and resorts.Ease of Booking: Not much of an explanation is
-                    needed for this one. To put it bluntly, if a booking
-                    engine requires ANY extra steps beyond the basics of room type, guest name & email, and payment
-                    info, then it will not be effective. Simplify the booking process as much as possible for the
-                    largest return.</p>
-            </div>
-        </div>
-    </div>
-    <div class="counter mb-3 mt-3">
-        <div class="row scollerhide">
-            <div class="col-12 col-lg-3">
-                <div class="count-up">
-                    <p class="counter-count">100</p>
-                    <h3>Rooms</h3>
-                </div>
-            </div>
+    <div class="container mt-5 pt-5">
+        <div class="jumbotron-FLUID">
+            <h1 class="heading">RESORT</h1>
+            <div class="row scollerhide">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="text-justify mt-3">
+                        Sophistication and beauty – this is what marks out Hotel Laguna’s 74 rooms with terraces over
+                        the Chia panorama and its lagoon populated with pink flamingos, rolling sand dunes, ultra-fine
+                        white sand and wonderful turquoise sea. Our use of traditional Sardinian pottery, stone and
+                        mosaic decorations and careful choice of fresh fabrics and design objects contributes to the
+                        hotel’s exclusive atmosphere.
 
-            <div class="col-12 col-lg-3">
-                <div class="count-up">
-                    <p class="counter-count">200</p>
-                    <h3>Party</h3>
+                    </div>
+                    <div class="text-justify mt-3">
+                        The beaches around Chia Laguna Resort are some of the most beautiful in the Mediterranean with
+                        panoramas beyond your most exotic dreams without you even needing to cross the ocean: white sand
+                        dunes, transparent water, centuries old juniper trees and the lagoon’s multi-coloured
+                        reflections. The Dune di Campana beach is a wonder waiting to be discovered with its very fine
+                        white sand and a sea with infinite nuances of turquoise. You can get to the beach with our
+                        convenient private shuttle service and Laguna clients are entitled to use our exclusive VIP
+                        area.
+                    </div>
+                    When night falls, you can relax with a delicious pre-dinner drink in our sophisticated champagne bar
+                    Bollicine with views over the Tower of Chia. And to exalt the pleasures of the palate don’t miss out
+                    on a dinner at our renowned La Terrazza restaurant, a journey through the authentic flavours of this
+                    warm and generous land.
                 </div>
-            </div>
-
-            <div class="col-12 col-lg-3">
-                <div class="count-up">
-                    <p class="counter-count">300</p>
-                    <h3>Activities</h3>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <img class="image" src="img/r7.jpg" alt="Responsive image" />
+                    <hr>
+                    <p class="lnk-checktool mt-3">
+                        <a href="Booking.html" class="btn btn-info btn-lg btn-block">RESORT BOOKING</a>
+                    </p>
                 </div>
-            </div>
-
-            <div class="col-12 col-lg-3">
-                <div class="count-up">
-                    <p class="counter-count">500</p>
-                    <h3>Events</h3>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                   <img src="img/r3.jpg" class="image spaimage resort">
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <img class="image spaimage" src="img/r4.jpeg" alt="Responsive image" />
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                    <img class="image spaimage" src="img/r5.jpg" alt="Responsive image" />
                 </div>
             </div>
         </div>
@@ -129,25 +123,13 @@
         </div>
         </div>
     </footer>
-
     <script src="scripts/jquery-3.5.1.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script>
-        $('.counter-count').each(function () {
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-
-                //chnage count up speed here
-                duration: 4000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        });
+        $(document).ready(function () {
+            $('#discountModal').modal('show');
+        }); 
     </script>
-  
 </body>
 
 </html>

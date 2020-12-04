@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark smart-scroll">
         <a class="navbar-brand" href="index.html"><img src="img/j31.png" width="50px" height="50px"></a>
@@ -41,60 +42,51 @@
         </div>
     </nav>
 
-    <div class="carousel-inner">
-        <img src="img/j59.jpg" alt="Los Angeles" />
-    </div>
-    <h1 class="text-center pt-5">
-        About US
-    </h1>
-    <div class="container mt-2">
-        <div class="row show-on-scroll">
-            <div class="col-lg-8">
-                <span><img class="image border-4" src="img/j58.jpg" alt="Responsive image" /></span>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mt-4">
-                <p><b>Royal Hotel & Resort</b> The best and most effective websites are the ones that entice the
-                    visitor to spend time exploring. Professional photography and video are both great mediums for
-                    storytelling, especially for hotels and resorts.Ease of Booking: Not much of an explanation is
-                    needed for this one. To put it bluntly, if a booking
-                    engine requires ANY extra steps beyond the basics of room type, guest name & email, and payment
-                    info, then it will not be effective. Simplify the booking process as much as possible for the
-                    largest return.</p>
-            </div>
-        </div>
-    </div>
-    <div class="counter mb-3 mt-3">
-        <div class="row scollerhide">
-            <div class="col-12 col-lg-3">
-                <div class="count-up">
-                    <p class="counter-count">100</p>
-                    <h3>Rooms</h3>
+    <div class="container mt-5 pt-5">
+        <div class="jumbotron-FLUID">
+            <h1 class="heading">SPA</h1>
+            <div class="row scollerhide">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="text-justify mt-3">
+                        The sybaritic Asphodel Spa is a hymn to nature, intriguing to the senses yet calming to
+                        the mind. The sound of falling water, the fine incense of ouzo and anise, the breeze in the
+                        garden treatment rooms, the rich natural textures; these and a variety of treatments
+                        offering different experiences and Elemis products have been deployed in its design to
+                        awake all the senses and sooth the body and mind. This is one of the best spas in the
+                        world, a space that can keep the visitor content day after day.
+                    </div>
+                    <div class="text-justify mt-3">
+                        Elemis Skin Specifics
+                        The Elemis Skin Specific Facials are the perfect skin maintenance facial, combining
+                        exceptional skin conditioning plant actives with unique Eastern massage techniques to
+                        deeply cleanse the face, whilst renewing radiance and treating the skin. Recommended:
+                        1 treatment every 2 weeks.
+                        Price: €91.50
+                    </div>
+                    <div class="text-justify mt-3">
+                        Body Exfoliation – (30 mins)
+                        An exotic exfoliation ritual to invigorate and revitalise the body. After light body
+                        brushing of your body your skin is deeply cleansed, polished and softened to perfection,
+                        completed with an application of Exotic Island Flower Body Lotion leaving the skin
+                        glowing and vibrant, replenished and flawless.
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-12 col-lg-3">
-                <div class="count-up">
-                    <p class="counter-count">200</p>
-                    <h3>Party</h3>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <img class="image" src="img/k1.jpg" alt="Responsive image" />
+                    <hr>
+                    <p class="lnk-checktool mt-3">
+                        <a href="Booking.html" class="btn btn-info btn-lg btn-block">SPA BOOKING</a>
+                    </p>
                 </div>
-            </div>
-
-            <div class="col-12 col-lg-3">
-                <div class="count-up">
-                    <p class="counter-count">300</p>
-                    <h3>Activities</h3>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <img class="image spaimage" src="img/k5.png" alt="Responsive image" />
                 </div>
-            </div>
-
-            <div class="col-12 col-lg-3">
-                <div class="count-up">
-                    <p class="counter-count">500</p>
-                    <h3>Events</h3>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <img class="image spaimage" src="img/k6.png" alt="Responsive image" />
                 </div>
             </div>
         </div>
     </div>
-
     <footer class="page-footer font-small special-color-dark pt-4 social-footer bg">
         <div class="py-4 bg-dark text-white-50">
             <div class="container text-center">
@@ -133,21 +125,10 @@
     <script src="scripts/jquery-3.5.1.min.js"></script>
     <script src="scripts/bootstrap.min.js"></script>
     <script>
-        $('.counter-count').each(function () {
-            $(this).prop('Counter', 0).animate({
-                Counter: $(this).text()
-            }, {
-
-                //chnage count up speed here
-                duration: 4000,
-                easing: 'swing',
-                step: function (now) {
-                    $(this).text(Math.ceil(now));
-                }
-            });
-        });
+        $(document).ready(function () {
+            $('#discountModal').modal('show');
+        }); 
     </script>
-  
 </body>
 
 </html>
