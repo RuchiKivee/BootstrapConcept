@@ -6,23 +6,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>jQuery Form</title>
-    <style>
-        table {
-            width: 100%;
-        }
-
-        th,
-        td {
-            text-align: left;
-            padding: 8px;
-        }
-    </style>
 </head>
 
-<body>
+<body class="bgimg">
     <div class="container">
         <div class="my-5 card shadow-lg">
             <div class="card-body">
+                <img src="img/c3.jpg" class='card-img-top'>
                 <h2 class="text-center">Registration</h2>
                 <form method="get">
                     <div class="field_wrapper">
@@ -42,75 +32,114 @@
                                 </div>
                             </div>
                         </div>
-                       
+
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" name="phone" id="phone" class="form-control field fname"
+                                    <input type="text" name="phone" id="phone" class="form-control field"
                                         placeholder="Enter the Mobile No." />
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="date" name="=date" id="date" class="form-control field fname" />
+                                    <input type="date" name="=date" id="date" class="form-control field" />
                                 </div>
                             </div>
 
                         </div>
                         <div class="form-group">
-                            <textarea type="text" name="=address" id="address" class="form-control field fname" row="3"
+                            <textarea type="text" name="=address" id="address" class="form-control field"
                                 placeholder="Enter the Address"></textarea>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="txtcity" placeholder="Enter the City">
+                            </div>
+                            <div class="form-group col-md-4">
+
+                                <select id="txtstate" class="form-control">
+                                    <option value="">Choose State</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="GOA">GOA</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Other">other</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="txtpincode" placeholder="Enter the Pincode">
+                            </div>
                         </div>
                         <div class="form-group field">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <input type="text" name="fname" id="email" class="form-control field fname"
-                                        placeholder="Enter Email" />
+                                    <input type="text" name="email" id="email" class="form-control field"
+                                        placeholder="Enter the Email" />
                                 </div>
-                                <div class="col-md-6 fname">
-                                    <div class="form-group">
-                                        <label for="cars">Select Gender</label>
-                                        <select name="cars" id="cars" class="fname">
-                                            <option value="">Select</option>
-                                            <option value="Male">Male</option>
-                                            <option value="FeMale">FeMale</option>
-                                            <option value="Other">Other</option>
-                                        </select>
-                                    </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="hobby" id="hobby" class="form-control field"
+                                        placeholder="Enter the Hobbies" />
                                 </div>
                             </div>
                         </div>
-                    </div><a class="add_button" title="Add field">
-                        <div class="fa fa-plus"></div></a>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <select name="gender" id="gender" class="form-control field">
+                                        <option value="">Select Gender</option>
+                                        <option value="Male">Male</option>
+                                        <option value="FeMale">FeMale</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios1" value="ASP.NET" checked>
+                                    <label class="form-check-label mr-4" for="exampleRadios1">
+                                        ASP.NET
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="Angular">
+                                    <label class="form-check-label mr-4" for="exampleRadios2">
+                                        Angular
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="PHP">
+                                    <label class="form-check-label mr-4" for="exampleRadios2">
+                                        PHP
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="Laravel">
+                                    <label class="form-check-label mr-4" for="exampleRadios2">
+                                        Laravel
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="Android">
+                                    <label class="form-check-label mr-4" for="exampleRadios2">
+                                        Android
+                                    </label>
+                                    <input class="form-check-input" type="radio" name="exampleRadios"
+                                        id="exampleRadios2" value="Other">
+                                    <label class="form-check-label mr-4" for="exampleRadios2">
+                                        Other
+                                    </label>
+                                </div>
+                            </div>
+                            <a class="add_button btn btn-warning btn-lg ml-3" title="Add field" 
+                                name="addfield">
+                                <div class="fa fa-plus"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="text-center mt-5">
+                        <button type="button" class="btn btn-primary mb-5"
+                            id="btnAdd" data-target="#writereview" data-toggle="modal">
+                            Submit
+                        </button>
                     </div>
             </div>
-        <div class="text-center">
-            <button type="button" class="btn btn-primary mt-3" id="btnAdd" data-target="#writereview"
-                data-toggle="modal">
-                Submit
-            </button>
+            </form>
         </div>
-        </form>
     </div>
-    </div>
-
-    <!-- <h2 class="text-center pt-5 mt-5">Registration</h2>
-    <div class="field_wrapper text-center pt-4">
-        <input type="text" name="fname" id="name" class="fname m-3" placeholder="Enter the FirstName"/>
-        <input type="text" name="lname" id="lname" class="fname m-2" placeholder="Enter the LastName"/>
-        <input type="text" name="fname" id="name" class="fname m-2" placeholder="Enter the Age"/>
-        <input type="Radio" name="fname" id="name" class="fname m-2" value="Male"/>Male
-        <input type="Radio" name="fname" id="name" class="fname m-2" value="Female"/>FeMale
-        <input type="text" name="fname" id="name" class="fname m-2" placeholder="Enter the FirstName"/>
-        <input type="text" name="fname" id="name" class="fname m-2" placeholder="Enter the FirstName"/>
-        <input type="text" name="fname" id="name" class="fname m-2" placeholder="Enter the FirstName"/>
-        <input type="text" name="fname" id="name" class="fname m-2" placeholder="Enter the FirstName"/>
-        <input type="text" name="fname" id="name" class="fname" placeholder="Enter the FirstName"/>
-        
-    </div> -->
-    <!-- <div class="text-center">
-        <button type="button" class="btn btn-primary mt-3" id="btnAdd" data-target="#writereview" data-toggle="modal">
-            Submit
-        </button>
-    </div> -->
 
     <div class="modal fade" id="writereview" tabindex="-1" role="dialog" aria-labelledby="basicModal"
         aria-hidden="true">
@@ -127,21 +156,41 @@
                         <div class="row scollerhide">
                             <div class="col-md-10">
                                 <form id="form1">
-                                    <div>
-                                        <table class='table' id='UserInfo'>
+                                    <table class="table table-bordered table-responsive">
+                                        <thead>
                                             <tr>
-                                                <th>FirstName</th>
-                                                <th>LastName</th>
-                                                <th>MobileNo</th>
+                                                <th>Name</th>
+                                                <th>Phone No</th>
+                                                <th>BirthDate</th>
+                                                <th>Address</th>
+                                                <th>City</th>
+                                                <th>State</th>
+                                                <th>Pincode</th>
+                                                <th>Email</th>
+                                                <th>Hobby</th>
+                                                <th>Gender</th>
+                                                <th>Language Known</th>
+                                                <th>Extra Fields</th>
                                             </tr>
+                                        </thead>
+                                        <tbody class='table' id='UserInfo'>
                                             <tr>
-                                                <!-- <td><span id="fname"></span></td>
-                                                <td><span id="lname"></span></td>
-                                                <td><span id="phone"></span></td> -->
+                                                <td id="fname1"></td>
+                                                <td id="tdata2"></td>
+                                                <td id="tdata3"></td>
+                                                <td id="tdata5"></td>
+                                                <td id="tdat7"></td>
+                                                <td id="tdata8"></td>
+                                                <td id="tdata9"></td>
+                                                <td id="tdata1"></td>
+                                                <td id="tdata10"></td>
+                                                <td id="tdata4"></td>
+                                                <td id="tdata6"></td>
+                                                <td id="tdata11"></td>
+                                                <!-- <td id="table_td"></td> -->
                                             </tr>
-                                            <tbody id="table_td"></tbody>
-                                        </table>
-                                    </div>
+                                        </tbody>
+                                    </table>
                                 </form>
                             </div>
                         </div>
@@ -159,42 +208,75 @@
         $(document).ready(function () {
 
             $("#btnAdd").click(function () {
-                var divValue, values = '';
+                var values = '';
+                var val = '';
                 $('.fname').each(function () {
-                    values += this.value + '<br />'
-                    console.log("values");
+                    values = values + this.value + '&nbsp'
                 });
-                $("#table_td").html('<p></p>' + values);
+                $("input[name=addfield]").each(function () {
+                    val = val + this.value + '&nbsp'
+                });
+                console.log(values);
+                // var name = $(".fname").val();
+                // console.log(name);
+                var phone = $("#phone").val();
+                console.log(phone);
+                var date = $("#date").val();
+                var address = $("#address").val();
+                var city = $("#txtcity").val();
+                var state = $("#txtstate").val();
+                var pincode = $("#txtpincode").val();
+                var email = $("#email").val();
+                var hobby = $("#hobby").val();
+                var gender = $("#gender").val();
+                var addfield = $('.extrafield').each(function () {
+                    addfield = addfield + this.value + '&nbsp'
+                });
+                console.log(addfield);
+                var radio = $('input[name=exampleRadios]:checked', 'form').val();
+                $("#fname1").html(values);
+                $("#tdata2").html(phone);
+                $("#tdata3").html(date);
+                $("#tdata5").html(address);
+                $("#tdat7").html(city);
+                $("#tdata8").html(state);
+                $("#tdata9").html(pincode);
+                $("#tdata1").html(email);
+                $("#tdata10").html(hobby);
+                $("#tdata4").html(gender);
+                $("#tdata11").html(addfield);
+                $("#tdata6").html(radio);
+
             });
+
+
             $(document).on("click", "#A_delete", function () {
                 $(this).parents("tr").remove();
             });
-        });
-        function GetHtml() {
-            return "<tr><td class='Id'>$[Id]</td>"
-                + "<td class='action'> <a href='#' id='A_delete'>$[Delete]</a></td></tr>";
-        }
+            function GetHtml() {
+                return "<tr><td class='Id'>$[Id]</td>"
+                    + "<td class='action'> <a href='#' id='A_delete'>$[Delete]</a></td></tr>";
+            }
 
-        $(document).ready(function () {
-            var maxField = 10; //Input fields increment limitation
-            var addButton = $('.add_button'); //Add button selector
-            var wrapper = $('.field_wrapper'); //Input field wrapper
-            var fieldHTML = '<div><input type="text" name="fname" class="fname" value="" /><a class="remove_button fa fa-minus"></a></div>'; //New input field html
-            var x = 1; //Initial field counter is 1
-
-            //Once add button is clicked
-            $(addButton).click(function () {
-                if (x < maxField) {
-                    x++;
-                    $(wrapper).append(fieldHTML);
-                }
-            });
-
-            //Once remove button is clicked
-            $(wrapper).on('click', '.remove_button', function (e) {
-                e.preventDefault();
-                $(this).parent('div').remove(); //Remove field html
-                x--; //Decrement field counter
+            $(document).ready(function () {
+                var maxField = 10; //Input fields increment limitation
+                var addButton = $('.add_button'); //Add button selector
+                var wrapper = $('.field_wrapper'); //Input field wrapper
+                var fieldHTML = '<div><input type="text" name="addfield" class=" form-control mt-3 extrafield" value="" /><a class="remove_button fa fa-minus"></a></div>'; //New input field html
+                var x = 1; //Initial field counter is 1
+                //Once add button is clicked
+                $(addButton).click(function () {
+                    if (x < maxField) {
+                        x++;
+                        $(wrapper).append(fieldHTML);
+                    }
+                });
+                //Once remove button is clicked
+                $(wrapper).on('click', '.remove_button', function (e) {
+                    e.preventDefault();
+                    $(this).parent('div').remove(); //Remove field html
+                    x--; //Decrement field counter
+                });
             });
         });
     </script>
