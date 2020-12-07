@@ -124,15 +124,14 @@
                                     </label>
                                 </div>
                             </div>
-                            <a class="add_button btn btn-warning btn-lg ml-3" title="Add field" 
-                                name="addfield">
+                            <a class="add_button btn btn-warning btn-lg ml-3" title="Add field" name="addfield">
                                 <div class="fa fa-plus"></div>
                             </a>
                         </div>
                     </div>
                     <div class="text-center mt-5">
-                        <button type="button" class="btn btn-primary mb-5"
-                            id="btnAdd" data-target="#writereview" data-toggle="modal">
+                        <button type="button" class="btn btn-primary mb-5" id="btnAdd" data-target="#writereview"
+                            data-toggle="modal">
                             Submit
                         </button>
                     </div>
@@ -151,10 +150,10 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <h1 class="text-center pt-5">Registration</h1>
+                    <h1 class="text-center">Registration</h1>
                     <div class="container text-center">
-                        <div class="row scollerhide">
-                            <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-12">
                                 <form id="form1">
                                     <table class="table table-bordered table-responsive">
                                         <thead>
@@ -213,12 +212,13 @@
                 $('.fname').each(function () {
                     values = values + this.value + '&nbsp'
                 });
-                $("input[name=addfield]").each(function () {
-                    val = val + this.value + '&nbsp'
+                $('.extrafield').each(function () {
+                    addfield = addfield + this.value + '&nbsp'
                 });
                 console.log(values);
-                // var name = $(".fname").val();
-                // console.log(name);
+
+                var name = $(".fname").val();
+                console.log(name);
                 var phone = $("#phone").val();
                 console.log(phone);
                 var date = $("#date").val();
@@ -229,7 +229,11 @@
                 var email = $("#email").val();
                 var hobby = $("#hobby").val();
                 var gender = $("#gender").val();
-                var addfield = $('.extrafield').each(function () {
+                var addfield = '';
+                // $('.extrafield').each(function () {
+                //     values = values + this.value + '&nbsp'
+                // });
+                $('.field2').each(function () {
                     addfield = addfield + this.value + '&nbsp'
                 });
                 console.log(addfield);
@@ -244,8 +248,9 @@
                 $("#tdata1").html(email);
                 $("#tdata10").html(hobby);
                 $("#tdata4").html(gender);
-                $("#tdata11").html(addfield);
                 $("#tdata6").html(radio);
+                $("#tdata11").html(addfield);
+
 
             });
 
@@ -262,7 +267,8 @@
                 var maxField = 10; //Input fields increment limitation
                 var addButton = $('.add_button'); //Add button selector
                 var wrapper = $('.field_wrapper'); //Input field wrapper
-                var fieldHTML = '<div><input type="text" name="addfield" class=" form-control mt-3 extrafield" value="" /><a class="remove_button fa fa-minus"></a></div>'; //New input field html
+                // var fieldHTML = '<div class="form-control mt-3 extrafield"><input type="text" name="addfield" class=" form-control mt-3 mb-3" value="" /><a class="remove_button btn btn-warning btn-lg fa fa-minus"></a></div>'; //New input field html
+                var fieldHTML = '<div class="form-group extrafield mt-3"><input type="text" name="addfield" class="form-control field2 mb-3"><i class="d-inline"></i><i class="fa fa-minus remove_button btn btn-warning btn-lg"></i></div>';
                 var x = 1; //Initial field counter is 1
                 //Once add button is clicked
                 $(addButton).click(function () {
